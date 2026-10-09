@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarcaQuadras Backup</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 46rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #1d1d1f; background: #fff; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 1.8rem; }
+  a { color: #0b57d0; } footer { margin-top: 2.5rem; font-size: .9rem; color: #555; }
+</style>
+</head>
+<body>
+<h1>MarcaQuadras Backup</h1>
+<p>
+  O <strong>MarcaQuadras Backup</strong> é a rotina de cópia de segurança do sistema MarcaQuadras, de uso
+  exclusivo do seu próprio desenvolvedor e operador. Não é um produto oferecido ao público e não tem cadastro de
+  usuários.
+</p>
+
+<h2>O que o aplicativo faz</h2>
+<ul>
+  <li>Num servidor do próprio operador, gera pacotes de cópia de segurança do sistema MarcaQuadras.</li>
+  <li>Cifra cada pacote inteiro (ferramenta <em>age</em>) <strong>antes</strong> de sair do servidor; a chave que abre os
+    pacotes não fica no servidor nem no Google Drive.</li>
+  <li>Envia os pacotes cifrados para uma pasta no Google Drive <strong>do próprio operador</strong>, baixa de volta para
+    conferir a integridade e remove os pacotes antigos conforme a política de retenção.</li>
+</ul>
+
+<h2>Acesso ao Google Drive</h2>
+<p>
+  O aplicativo pede apenas o escopo <code>https://www.googleapis.com/auth/drive.file</code>: ele só enxerga e só altera
+  os arquivos e pastas que <strong>ele mesmo criou</strong>. Não lê, não lista e não altera nenhum outro arquivo do Drive.
+</p>
+
+<p>Política de Privacidade: <a href="privacidade.html">privacidade.html</a></p>
+
+<footer>
+  <p><em>English summary:</em> MarcaQuadras Backup is a private, single-operator backup tool. It uploads
+  client-side encrypted backup packages to the operator's own Google Drive using only the
+  <code>drive.file</code> scope (access limited to files the app itself creates).
+  <a href="privacidade.html">Privacy Policy</a>.</p>
+</footer>
+</body>
+</html>
